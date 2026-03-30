@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Requests-SwapHub</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <header>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-dot"></span>Swap<span>Hub</span>
+    </a>
+    <nav>
+      <a href="index.html">Browse</a>
+      <a href="my-requests.html">My Requests</a>
+      <a href="post-item.html" class="btn-post">+ Post Item</a>
+    </nav>
+  </div>
+</header>
+ 
+<main>
+  <div class="page-header">
+    <h1>My Swap Requests</h1>
+    <p>Track all the swaps you've proposed. Manage their status here.</p>
+  </div>
+
+  <div class="stats-bar" style="margin-bottom:1.5rem;">
+    <div class="stat-item">
+      <div class="stat-value" id="stat-total">0</div>
+      <div class="stat-label">Total</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value" style="color:#ffc832;" id="stat-pending">0</div>
+      <div class="stat-label">Pending</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value" style="color:var(--success);" id="stat-accepted">0</div>
+      <div class="stat-label">Accepted</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value" style="color:#ff6060;" id="stat-rejected">0</div>
+      <div class="stat-label">Rejected</div>
+    </div>
+  </div>
+ 
+  <div class="section-top">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <h2>Requests</h2>
+      <span class="count-chip" id="requests-count">0</span>
+    </div>
+    <div class="filters" style="margin:0;">
+      <button class="req-filter-btn filter-btn active" data-status="All">All</button>
+      <button class="req-filter-btn filter-btn" data-status="Pending">⏳ Pending</button>
+      <button class="req-filter-btn filter-btn" data-status="Accepted">✓ Accepted</button>
+      <button class="req-filter-btn filter-btn" data-status="Rejected">✕ Rejected</button>
+    </div>
+  </div>
+ 
+  <div class="requests-list" id="requests-list"></div>
+</main>
+ 
+<footer>
+  <span>SwapHub</span> · Built with 🔄 · Trade fairly, trade locally ·
+  <a href="index.html">Browse items</a>
+</footer>
+ 
+<div id="toast" class="toast"></div>
+ 
+<script src="js/data.js"></script>
+<script src="js/requests.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwapHub — Trade What You Have</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <header>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-dot"></span>Swap<span>Hub</span>
+    </a>
+    <nav>
+      <a href="index.html">Browse</a>
+      <a href="my-requests.html">My Requests</a>
+      <a href="post-item.html" class="btn-post">+ Post Item</a>
+    </nav>
+  </div>
+</header>
+ 
+<main>
+  <div class="hero">
+    <div class="hero-tag">🔄 Community Barter Platform</div>
+    <h1>Trade What You Have<br />for What You <em>Want</em></h1>
+    <p>No money needed. Post your items, find matching swaps, and trade with people nearby.</p>
+  </div>
+
+  <div class="stats-bar">
+    <div class="stat-item">
+      <div class="stat-value" id="stat-items">0</div>
+      <div class="stat-label">Items Listed</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value" id="stat-requests">0</div>
+      <div class="stat-label">Swap Requests</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value" id="stat-cats">0</div>
+      <div class="stat-label">Categories</div>
+    </div>
+  </div>
+
+  <div class="section-top">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <h2>Available Items</h2>
+      <span class="count-chip" id="items-count">0</span>
+    </div>
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="search-input" placeholder="Search items…" />
+    </div>
+  </div>
+
+  <div class="filters">
+    <span class="filter-label">Filter:</span>
+    <button class="filter-btn active" data-cat="All">All</button>
+    <button class="filter-btn" data-cat="Electronics">📱 Electronics</button>
+    <button class="filter-btn" data-cat="Fashion">👟 Fashion</button>
+    <button class="filter-btn" data-cat="Books">📚 Books</button>
+    <button class="filter-btn" data-cat="Furniture">🪑 Furniture</button>
+    <button class="filter-btn" data-cat="Sports">⚽ Sports</button>
+    <button class="filter-btn" data-cat="Gaming">🎮 Gaming</button>
+    <button class="filter-btn" data-cat="Other">📦 Other</button>
+  </div>
+
+  <div class="items-grid" id="items-grid"></div>
+</main>
+ 
+<footer>
+  <span>SwapHub</span> · Built with 🔄 · Trade fairly, trade locally ·
+  <a href="post-item.html">Post an item</a>
+</footer>
+ 
+<div id="toast" class="toast"></div>
+
+<script src="js/data.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>

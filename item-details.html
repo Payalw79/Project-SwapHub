@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Details-SwapHub</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <header>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-dot"></span>Swap<span>Hub</span>
+    </a>
+    <nav>
+      <a href="index.html">Browse</a>
+      <a href="my-requests.html">My Requests</a>
+      <a href="post-item.html" class="btn-post">+ Post Item</a>
+    </nav>
+  </div>
+</header>
+ 
+<main>
+  <div style="margin-bottom:1.5rem;">
+    <a href="index.html" class="btn btn-secondary" style="display:inline-flex;width:auto;">← Back to Browse</a>
+  </div>
+ 
+  <div class="details-layout">
+
+    <div class="details-image-wrap" id="item-image-wrap"></div>
+
+    <div class="details-info">
+      <div class="details-meta">
+        <span class="badge badge-cat" id="item-category-badge"></span>
+        <span class="badge badge-cond" id="item-condition-badge"></span>
+      </div>
+ 
+      <h1 class="details-title" id="item-title"></h1>
+ 
+      <div class="details-section">
+        <div class="details-section-label">Description</div>
+        <div class="details-section-value" id="item-description"></div>
+      </div>
+ 
+      <div class="exchange-box">
+        <div class="exchange-icon">⇄</div>
+        <div>
+          <div class="exchange-label">Looking to swap for</div>
+          <div class="exchange-value" id="item-exchange"></div>
+        </div>
+      </div>
+ 
+      <div class="details-section">
+        <div class="details-section-label">Posted on</div>
+        <div class="details-section-value" id="item-date"></div>
+      </div>
+ 
+      <div class="details-actions">
+        <button id="request-swap-btn" class="btn btn-primary" style="padding:14px;">
+          🔄 Request a Swap
+        </button>
+        <button id="delete-item-btn" class="btn btn-danger">
+          🗑 Delete this Listing
+        </button>
+      </div>
+    </div>
+  </div>
+</main>
+ 
+<footer>
+  <span>SwapHub</span> · Built with 🔄 · Trade fairly, trade locally ·
+  <a href="index.html">Browse items</a>
+</footer>
+
+<div class="modal-overlay" id="swap-overlay">
+  <div class="modal">
+    <div class="modal-header">
+      <div>
+        <div class="modal-title">Request a Swap</div>
+        <div class="modal-subtitle">For: <strong id="modal-item-name"></strong></div>
+      </div>
+      <button class="modal-close" id="modal-close">✕</button>
+    </div>
+    <form id="swap-form" class="modal-form" novalidate>
+      <div class="form-group">
+        <label for="your-item">Your Item to Offer *</label>
+        <input type="text" id="your-item" placeholder="What will you give in exchange?" required />
+      </div>
+      <div class="form-group">
+        <label for="swap-message">Message to Owner *</label>
+        <textarea id="swap-message" placeholder="Tell them about your item, condition, and why you want to swap…" rows="3" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary" style="padding:12px;">
+        Send Swap Request ✓
+      </button>
+    </form>
+  </div>
+</div>
+ 
+<div id="toast" class="toast"></div>
+ 
+<script src="js/data.js"></script>
+<script src="js/details.js"></script>
+</body>
+</html>
